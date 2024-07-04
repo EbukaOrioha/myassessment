@@ -1,0 +1,33 @@
+
+<div *ngIf="cardpin!=''"class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+    Card PIN: {{cardpin}}
+  </div>
+  
+  <p class="fs-3 px-5 py-3" >New User Creation</p>
+  <form class="ms-5 mt-5" style="width: 50%"  #addForm="ngForm" (ngSubmit)="addCustomers(addForm)">
+    <div class="mb-3">
+      <label for="firstname" class="form-label">First Name</label>
+      <input  class="form-control" ngModel name="firstName" id="firstName" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="lastname" class="form-label">Last Name</label>
+      <input  class="form-control" ngModel name="lastName" id="lastName">
+    </div>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input class="form-control" ngModel name="title"  id="title">
+    </div>
+    <div class="mb-3">
+      <label for="username" class="form-label">User Name</label>
+      <input  class="form-control" ngModel name="username" id="username">
+    </div>
+   <div class="row g-3"> 
+    <button class="col-auto"type="submit" id="add-customer" class="btn btn-primary">Submit</button>
+    <button routerLink = "/fundcard" class="col-auto"   class="btn btn-secondary">Fund Card</button>
+   
+</div>
+  </form>
+
+   
+  
+  

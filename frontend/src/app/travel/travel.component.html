@@ -1,0 +1,28 @@
+
+<div *ngIf="cardpin!=''"class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+    Card PIN: {{cardpin}} successfully funded
+  </div>
+  
+  <p class="fs-3 px-5 py-3" >Book Journey</p>
+  <form class="ms-5 mt-5" style="width: 50%"  #addForm="ngForm" (ngSubmit)="travel(addForm)">
+    <select class="form-select mb-3 " size="3" aria-label="size 3 select example">
+        <option selected>Open to select Zone</option>
+        <option value="one">Holborn 1</option>
+        <option value="two">Earl’s Court 1</option>
+        <option value="three">Wimbledon 3</option>
+      </select>
+
+    <div class="mb-3">
+      <label for="amountDebit" class="form-label">Amount</label>
+      <input  class="form-control" ngModel name="amountDebit" id="amountDebit">
+    </div>
+    
+
+
+    <button type="submit" id="add-customer" class="btn btn-secondary">Book Travel</button>
+
+  </form>
+
+  
+  
+  

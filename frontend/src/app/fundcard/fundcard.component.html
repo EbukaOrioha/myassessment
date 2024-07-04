@@ -1,0 +1,25 @@
+
+<div *ngIf="cardpin!=''"class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+    Card PIN: {{cardpin}} successfully funded
+  </div>
+  
+  <p class="fs-3 px-5 py-3" >Fund Card</p>
+  <form class="ms-5 mt-5" style="width: 50%"  #addForm="ngForm" (ngSubmit)="fundcard(addForm)">
+    <div class="mb-3">
+      <label for="amount" class="form-label">Amount</label>
+      <input type="number"  class="form-control" ngModel name="firstName" id="firstName" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="cardpin" class="form-label">10 digit Card Pin</label>
+      <input  class="form-control" ngModel name="cardpin" id="cardpin">
+    </div>
+    
+
+
+    <button type="submit" id="add-customer" class="btn btn-secondary">Fund Card</button>
+    <button routerLink="/travel" class="btn btn-dark">Travel</button>
+  </form>
+
+  
+  
+  
